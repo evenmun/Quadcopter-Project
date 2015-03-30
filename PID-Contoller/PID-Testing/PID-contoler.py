@@ -24,7 +24,9 @@ def Compute():
     #Compute All the working error variables
     error = (setpoint - input);
     errNewSum =  (error * timeChange);
+    #Integral
     errSum += errNewSum;
+    #Derivat
     dErr = (error - lastErr) / timeChange;
 
     #Compute PID Output
